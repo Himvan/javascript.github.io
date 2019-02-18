@@ -1,6 +1,6 @@
 function s_String(str){
     var st1=str.toLowerCase();
-    var arr = st1.split('');
+    var arr = [...st1];  
     var tmp;
     for(var i = 0; i < arr.length; i++){
       for(var j = i + 1; j < arr.length; j++){
@@ -12,7 +12,11 @@ function s_String(str){
         }
       }
     }
-    return arr.join('');
+    for(var i=0;i<arr.length;i++)
+    {
+      var str2=str2+ arr[i];
+    }
+    return str2;
   }
   var string1=s_String("Himvan");
  var string2=s_String("imanvh");
