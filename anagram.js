@@ -1,6 +1,13 @@
 function s_String(str){
+    var arr=[];
+    var j=0;
     var st1=str.toLowerCase();
-    var arr = [...st1];  
+    for(let i of st1)
+    {
+      arr[j]=i;
+      j++;
+    }
+ 
     var tmp;
     for(var i = 0; i < arr.length; i++){
       for(var j = i + 1; j < arr.length; j++){
